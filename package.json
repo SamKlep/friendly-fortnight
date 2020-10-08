@@ -1,0 +1,14 @@
+{
+  "name": "ecommerce-mern",
+  "version": "1.0.0",
+  "description": "full-stack ecommerce application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "Samuel Klepper",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
