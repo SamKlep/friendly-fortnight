@@ -23,15 +23,38 @@ const productSchema = mongoose.Schema(
       required: true,
       ref: 'User',
     },
-    name: {
+    title: {
       type: String,
       required: true,
     },
-    image: {
+    subtitle: {
       type: String,
-      required: true,
     },
     brand: {
+      type: String,
+      required: true,
+    },
+    issue: {
+      type: Number,
+      required: true,
+    },
+    year: {
+      type: Number,
+      required: true,
+    },
+    age: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: String,
+      required: true,
+    },
+    artist: {
+      type: String,
+      required: true,
+    },
+    character: {
       type: String,
       required: true,
     },
@@ -43,6 +66,16 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+      required: true,
+    },
+    condition: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+
     reviews: [reviewSchema],
     rating: {
       type: Number,
