@@ -76,6 +76,18 @@ const ProductScreen = ({ history, match }) => {
                 <ListGroup.Item>
                   <h3>{product.title}</h3>
                 </ListGroup.Item>
+                {product.subtitle ? (
+                  <ListGroup.Item>
+                    <h5>{product.subtitle}</h5>
+                  </ListGroup.Item>
+                ) : (
+                  ''
+                )}
+                <ListGroup.Item>Issue: {product.issue}</ListGroup.Item>
+                <ListGroup.Item>Year: {product.year}</ListGroup.Item>
+                <ListGroup.Item>Publisher: {product.publisher}</ListGroup.Item>
+                <ListGroup.Item>Writer: {product.author}</ListGroup.Item>
+                <ListGroup.Item>Artist: {product.artist}</ListGroup.Item>
                 <ListGroup.Item>
                   <Rating
                     value={product.rating}
@@ -83,9 +95,7 @@ const ProductScreen = ({ history, match }) => {
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {product.description}
-                </ListGroup.Item>
+                <ListGroup.Item>{product.description}</ListGroup.Item>
               </ListGroup>
             </Col>
             <Col md={3}>
@@ -95,7 +105,7 @@ const ProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>Price:</Col>
                       <Col>
-                        <strong>{product.price}</strong>
+                        <strong>$ {product.price}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
