@@ -85,7 +85,7 @@ const ProductScreen = ({ history, match }) => {
                 )}
                 <ListGroup.Item>Issue: {product.issue}</ListGroup.Item>
                 <ListGroup.Item>Year: {product.year}</ListGroup.Item>
-                <ListGroup.Item>Publisher: {product.publisher}</ListGroup.Item>
+                <ListGroup.Item>Publisher: {product.brand}</ListGroup.Item>
                 <ListGroup.Item>Writer: {product.author}</ListGroup.Item>
                 <ListGroup.Item>Artist: {product.artist}</ListGroup.Item>
                 <ListGroup.Item>
