@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Product = ({ product }) => {
   return (
-    <Card className='my-3 p-3 rounded'>
+    <Card className='my-3 p-3 rounded text-center'>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image}></Card.Img>
       </Link>
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
           />
         </Card.Text>
         <Card.Text as='h3'>${product.price}</Card.Text>
-        <Card.Text as='h5'>${product.year}</Card.Text>
+        <Card.Text as='h5'>{product.year}</Card.Text>
       </Card.Body>
     </Card>
   )
