@@ -12,7 +12,14 @@ import { PRODUCT_UPDATE_RESET } from '../constants/productConstants'
 const ProductEditScreen = ({ match, history }) => {
   const productId = match.params.id
 
-  const [name, setName] = useState('')
+  const [title, setTitle] = useState('')
+  const [subtitle, setSubtitle] = useState('')
+  const [issue, setIssue] = useState('')
+  const [year, setYear] = useState('')
+  const [age, setAge] = useState('')
+  const [author, setAuthor] = useState('')
+  const [artist, setArtist] = useState('')
+  const [character, setCharacter] = useState('')
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
   const [brand, setBrand] = useState('')
@@ -41,8 +48,15 @@ const ProductEditScreen = ({ match, history }) => {
       if (!product.name || product._id !== productId) {
         dispatch(listProductDetails(productId))
       } else {
-        setName(product.name)
+        setTitle(product.title)
+        setSubtitle(product.subtitle)
+        setIssue(product.issue)
         setPrice(product.price)
+        setYear(product.year)
+        setAge(product.age)
+        setAuthor(product.author)
+        setArtist(product.artist)
+        setCharacter(product.character)
         setImage(product.image)
         setBrand(product.brand)
         setCategory(product.category)
@@ -80,8 +94,15 @@ const ProductEditScreen = ({ match, history }) => {
     dispatch(
       updateProduct({
         _id: productId,
-        name,
+        title,
+        subtitle,
         price,
+        issue,
+        year,
+        age,
+        author,
+        artist,
+        character,
         image,
         brand,
         category,
@@ -97,7 +118,7 @@ const ProductEditScreen = ({ match, history }) => {
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>Edit Comic</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
         {loading ? (
@@ -106,13 +127,21 @@ const ProductEditScreen = ({ match, history }) => {
           <Message variant='danger'>{error}</Message>
         ) : (
           <Form onSubmit={submitHandler}>
-            <Form.Group controlId='name'>
-              <Form.Label>Name</Form.Label>
+            <Form.Group controlId='title'>
+              <Form.Label>Title</Form.Label>
               <Form.Control
                 type='name'
-                placeholder='Enter name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}></Form.Control>
+                placeholder='Enter title'
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='subtitle'>
+              <Form.Label>Subtitle</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter subtitle'
+                value={subtitle}
+                onChange={(e) => setSubtitle(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group controlId='price'>
@@ -139,14 +168,62 @@ const ProductEditScreen = ({ match, history }) => {
                 {uploading && <Loader />}
               </Form.File>
             </Form.Group>
+            <Form.Group controlId='issue'>
+              <Form.Label>Issue</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter issue'
+                value={issue}
+                onChange={(e) => setIssue(e.target.value)}></Form.Control>
+            </Form.Group>
 
-            <Form.Group controlId='brand'>
+            <Form.Group controlId='publisher'>
               <Form.Label>Brand</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Enter brand'
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='year'>
+              <Form.Label>Year</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter year'
+                value={year}
+                onChange={(e) => setYear(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='age'>
+              <Form.Label>Age</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter age'
+                value={age}
+                onChange={(e) => setAge(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='writer'>
+              <Form.Label>Author</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter author'
+                value={author}
+                onChange={(e) => setAuthor(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='artist'>
+              <Form.Label>Artist</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter artist'
+                value={artist}
+                onChange={(e) => setArtist(e.target.value)}></Form.Control>
+            </Form.Group>
+            <Form.Group controlId='character'>
+              <Form.Label>Character</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter character'
+                value={character}
+                onChange={(e) => setCharacter(e.target.value)}></Form.Control>
             </Form.Group>
 
             <Form.Group controlId='countInStock'>

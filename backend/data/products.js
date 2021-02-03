@@ -2,7 +2,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'Giant-Sized Annual',
-    publisher: 'Marvel',
     issue: 7,
     year: 1987,
     age: 'Modern',
@@ -23,7 +22,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'Double-Sized Annual',
-    publisher: 'Marvel',
     issue: 5,
     year: 1985,
     age: 'Modern',
@@ -43,7 +41,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'Giant-Sized Annual',
-    publisher: 'Marvel',
     issue: 6,
     year: 1986,
     age: 'Modern',
@@ -63,7 +60,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'Annual',
-    publisher: 'Marvel',
     issue: 4,
     year: 1984,
     age: 'Modern',
@@ -84,7 +80,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'King-Size Annual',
-    publisher: 'Marvel',
     issue: 1,
     year: 1979,
     age: 'Modern',
@@ -105,7 +100,6 @@ const products = [
   {
     title: 'Peter Parker, The Spectacular Spider-Man',
     subtitle: 'King-Size Annual',
-    publisher: 'Marvel',
     issue: 2,
     year: 1980,
     age: 'Modern',
@@ -126,7 +120,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: 'The Gathering of Five (Part 4)',
-    publisher: 'Marvel',
     issue: 262,
     year: 1998,
     age: 'Modern',
@@ -147,7 +140,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: 'The Final Chapter (Part 3 of 4)',
-    publisher: 'Marvel',
     issue: 263,
     year: 1998,
     age: 'Modern',
@@ -167,7 +159,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: '',
-    publisher: 'Marvel',
     issue: 212,
     year: 1998,
     age: 'Modern',
@@ -188,7 +179,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: '',
-    publisher: 'Marvel',
     issue: 213,
     year: 1994,
     age: 'Modern',
@@ -209,7 +199,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: 'The Predator and The Prey (Part 1 of 2)',
-    publisher: 'Marvel',
     issue: 215,
     year: 1994,
     age: 'Modern',
@@ -230,7 +219,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: '',
-    publisher: 'Marvel',
     issue: 214,
     year: 1994,
     age: 'Modern',
@@ -252,7 +240,6 @@ const products = [
   {
     title: 'The Spectacular Spider-Man',
     subtitle: 'The Predator and The Prey (Part 2 of 2)',
-    publisher: 'Marvel',
     issue: 216,
     year: 1994,
     age: 'Modern',
